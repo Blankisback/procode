@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Seat</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="screening-list">
+        <h1>Select a Screening</h1>
+        {% for screening in screenings %}
+        <div class="screening-item">
+            <p>Time: {{ screening.time }}</p>
+            <a href="/seats/{{ screening.id }}">Choose Seats</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
